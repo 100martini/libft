@@ -17,6 +17,7 @@ SRCS			=	checks/ft_isalnum.c\
 					str/ft_strmapi.c\
 					str/ft_strchr.c\
 					str/ft_strncmp.c\
+					str/ft_strcmp.c\
 					str/ft_strdup.c\
 					str/ft_strnstr.c\
 					str/ft_striteri.c\
@@ -61,15 +62,15 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL) $(OBJSM)
 				@ar rcs $(NAME) $^
-				@printf "$(BLACK)==> $(GREEN)Libft compiled.\n\n$(RESET)"
+				@printf "$(BLACK)==> $(GREEN)Libft compiled\n$(RESET)"
 
 bonus:			$(NAME) $(OBJSB)
 				@ar rcs $^
-				@printf "$(BLACK)==> $(GREEN)Libft bonus compiled.\n\n$(RESET)"
+				@printf "$(BLACK)==> $(GREEN)Libft bonus compiled.\n$(RESET)"
 
 clean:
 				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL) $(OBJSM)
-				@printf "\n$(BLACK)==> $(PURPLE)Removed Libft.\n\n$(RESET)"
+				@printf "$(BLACK)==> $(PURPLE)Removed Libft.\n$(RESET)"
 
 fclean:			clean
 				@$(RM) $(NAME)
