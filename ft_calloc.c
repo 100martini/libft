@@ -6,10 +6,11 @@
 /*   By: wel-kass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 23:43:01 by wel-kass          #+#    #+#             */
-/*   Updated: 2023/11/16 23:43:07 by wel-kass         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:24:02 by wel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*new;

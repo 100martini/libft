@@ -6,7 +6,7 @@
 /*   By: wel-kass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 23:43:28 by wel-kass          #+#    #+#             */
-/*   Updated: 2023/11/16 23:43:32 by wel-kass         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:24:43 by wel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@ static size_t	count_size(long nbr)
 		size = 1;
 	}
 	if (nbr == 0)
-		size = 1; 
+		size = 1;
 	else
 	{
 		while (nbr != 0)
