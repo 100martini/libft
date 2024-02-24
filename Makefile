@@ -57,20 +57,20 @@ BLACK				=	\033[0;30m
 GREEN				=	\033[0;32m
 PURPLE				=	\033[0;35m
 RESET				=	\033[0m
-
-all:			$(NAME)
+RED				=	\033[0;31m
+all:				$(NAME)
 
 $(NAME):		$(OBJS) $(OBJSPF) $(OBJSGNL) $(OBJSM)
 				@ar rcs $(NAME) $^
-				@printf "$(BLACK)==> $(GREEN)Libft compiled\n$(RESET)"
+				@printf "$(GREEN)✓  libft\n$(RESET)"
 
 bonus:			$(NAME) $(OBJSB)
 				@ar rcs $^
-				@printf "$(BLACK)==> $(GREEN)Libft bonus compiled.\n$(RESET)"
+				@printf "$(GREEN)✓  libft bonus\n$(RESET)"
 
 clean:
 				@$(RM) $(OBJS) $(OBJSB) $(OBJSPF) $(OBJSGNL) $(OBJSM)
-				@printf "$(BLACK)==> $(PURPLE)Removed Libft.\n$(RESET)"
+				@printf "$(RED)✗  libft\n$(RESET)"
 
 fclean:			clean
 				@$(RM) $(NAME)
