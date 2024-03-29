@@ -44,7 +44,9 @@ SRCSB			=	lst/ft_lstnew_bonus.c\
 					lst/ft_lstdelone_bonus.c\
 					lst/ft_lstclear_bonus.c\
 					lst/ft_lstiter_bonus.c\
-					lst/ft_lstmap_bonus.c
+					lst/ft_lstmap_bonus.c\
+					gnl/gnl.c\
+					gnl/utils.c
 OBJSB			= $(SRCSB:.c=.o)
 
 CC				= cc
@@ -78,3 +80,4 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re bonus
+.SILENT:
