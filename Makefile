@@ -29,6 +29,8 @@ SRCS			=	checks/ft_isalnum.c\
 					str/ft_substr.c\
 					str/ft_strlcpy.c\
 					str/ft_strlen.c\
+					str/ft_strcat.c\
+					str/ft_strcpy.c\
 					ft_atoi.c\
 					ft_itoa.c\
 					ft_bzero.c\

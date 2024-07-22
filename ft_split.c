@@ -11,36 +11,36 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static size_t	words_count(char const *s, char c);
-static char		**mini_split(char const *s, char c, char **tab,
+static size_t	words_count(char const *s);
+static char		**mini_split(char const *s, char **tab,
 					size_t words_count);
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s)
 {
 	char	**tab;
 	size_t	words;
 
 	if (!s)
 		return (NULL);
-	words = words_count(s, c);
+	words = words_count(s);
 	tab = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
-	tab = mini_split(s, c, tab, words);
+	tab = mini_split(s, tab, words);
 	return (tab);
 }
 
-static size_t	words_count(char const *s, char c)
+static size_t	words_count(char const *s)
 {
 	size_t	count;
 
 	count = 0;
 	while (*s)
 	{
-		if (*s != c)
+		if (*s != ' ' && *s != '\t')
 		{
 			count++;
-			while (*s && *s != c)
+			while (*s && *s != ' ' && *s != '\t')
 				s++;
 		}
 		else
@@ -49,12 +49,12 @@ static size_t	words_count(char const *s, char c)
 	return (count);
 }
 
-static size_t	word_length(char const *s, char c)
+static size_t	word_length(char const *s)
 {
 	size_t	len;
 
 	len = 0;
-	while (*s && *s != c)
+	while (*s && *s != ' ' && *s != '\t')
 	{
 		len++;
 		s++;
@@ -72,19 +72,19 @@ static void	freetab(size_t len, char **tab)
 	free(tab);
 }
 
-static char	**mini_split(char const *s, char c, char **tab, size_t words_count)
+static char	**mini_split(char const *s, char **tab, size_t words_count)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < words_count)
 	{
-		while (*s == c)
+		while (*s == ' ' || *s == '\t')
 			s++;
-		tab[i] = ft_substr(s, 0, word_length(s, c));
+		tab[i] = ft_substr(s, 0, word_length(s));
 		if (!tab[i])
 			return (freetab(i, tab), NULL);
-		s += word_length(s, c);
+		s += word_length(s);
 		i++;
 	}
 	tab[i] = NULL;

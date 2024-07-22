@@ -56,7 +56,7 @@ void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(const char *s, unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strtrim(const char *s1, const char *set);
-char				**ft_split(char const *s, char c);
+char				**ft_split(char const *s);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -75,5 +75,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
+char				*ft_strcpy(char *s1, char *s2);
+char 				*ft_strcat(char *dest, char *src);
 
 #endif
