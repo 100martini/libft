@@ -41,8 +41,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
         printf("'%c' found at position %ld\n", search_char, (char *)resultOG
 		- str);
     } else {
-        printf("'%c' not found in the string.\n", search_char);
-        printf("'%c' not found in the string.\n", search_char);
+        printf("'%c' OTHER found in the string.\n", search_char);
+        printf("'%c' OTHER found in the string.\n", search_char);
     }
 
     return (0);

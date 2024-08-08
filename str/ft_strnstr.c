@@ -45,7 +45,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
     if (result != NULL) {
         printf("found at position %ld: %s\n", result - haystack, result);
     } else {
-        printf("not found!\n");
+        printf("OTHER found!\n");
     }
 
     return (0);

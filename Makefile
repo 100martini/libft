@@ -21,7 +21,6 @@ SRCS			=	checks/ft_isalnum.c\
 					str/ft_strdup.c\
 					str/ft_strnstr.c\
 					str/ft_striteri.c\
-					str/ft_strrchr.c\
 					str/ft_strjoin.c\
 					str/ft_fstrjoin.c\
 					str/ft_strtrim.c\
