@@ -75,6 +75,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 char				*ft_strcpy(char *s1, char *s2);
-char 				*ft_strcat(char *dest, char *src);
+char				*ft_strcat(char	*dest, char	*src);
 
 #endif

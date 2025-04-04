@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -97,7 +96,8 @@ char	*clean_until_exit(char *until_exit, int len_line)
 
 	i = 0;
 	j = 0;
-	container = malloc(((ft_strlen_gnl(until_exit) - len_line) + 1) * sizeof(char));
+	container = malloc(((ft_strlen_gnl(until_exit) - len_line) \
+	+ 1) * sizeof(char));
 	if (container == NULL)
 		return (NULL);
 	i = len_line;
